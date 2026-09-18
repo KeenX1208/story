@@ -1,0 +1,641 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f7f9fc;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.element {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scrolly-viewport {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1200px;
+}
+
+.global-backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.global-backgrounds>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.world-scale-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.ui-layer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    pointer-events: none;
+}
+
+.home-scenario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ground {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 220px;
+    z-index: 1000;
+}
+
+.ground img {
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    width: 3000px;
+    max-width: none;
+    transform-origin: center center;
+}
+
+#scenario-1 .title-heading {
+    position: absolute;
+    bottom: 260px;
+    left: calc(50% - 370px);
+    z-index: 2000;
+    width: 700px;
+}
+
+#scenario-1 .mask {
+    position: absolute;
+    background: rgba(211, 211, 211, 0.25);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1150;
+}
+
+#scenario-1 .title-house {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 750px);
+    z-index: 800;
+    width: 600px;
+}
+
+#scenario-1 .title-tree {
+    position: absolute;
+    bottom: 80px;
+    left: calc(50% + 300px);
+    z-index: 800;
+    width: 450px;
+}
+
+#scenario-1 .title-bush {
+    position: absolute;
+    bottom: -30px;
+    left: calc(50% + 450px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-1 .title-pinetree {
+    position: absolute;
+    bottom: -50px;
+    left: calc(50% - 940px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-1 .title-cloud-1 {
+    position: absolute;
+    top: 110px;
+    left: calc(50% - 740px);
+    width: 300px;
+    z-index: 1200;
+}
+
+#scenario-1 .title-cloud-2 {
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 340px);
+    width: 200px;
+    z-index: 500;
+}
+
+#scenario-1 .title-cloud-3 {
+    position: absolute;
+    top: 110px;
+    left: calc(50% + 40px);
+    width: 300px;
+    z-index: 1200;
+}
+
+#scenario-1 .title-cloud-4 {
+    position: absolute;
+    top: 30px;
+    left: calc(50% + 540px);
+    width: 300px;
+    z-index: 500;
+}
+
+#scenario-2 .page1-background-building {
+    position: absolute;
+    bottom: 250px;
+    left: calc(50% - 600px);
+    z-index: 700;
+    width: 1300px;
+}
+
+#scenario-2 .page1-building-left {
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 700px);
+    z-index: 800;
+    width: 600px;
+}
+
+#scenario-2 .page1-building-right {
+    position: absolute;
+    bottom: -60px;
+    left: calc(50% + 100px);
+    z-index: 800;
+    width: 700px;
+}
+
+#scenario-2 .page1-temple {
+    position: absolute;
+    bottom: 175px;
+    left: calc(50% - 70px);
+    z-index: 800;
+    width: 150px;
+}
+
+#scenario-2 .page1-factory {
+    position: absolute;
+    bottom: 200px;
+    left: calc(50% - 105px);
+    z-index: 800;
+    width: 210px;
+    pointer-events: auto;
+}
+
+#scenario-2 .page1-chimney {
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 650px);
+    z-index: 500;
+    width: 1200px;
+}
+
+#scenario-2 .page1-pollutedpinetree {
+    position: absolute;
+    bottom: -50px;
+    left: calc(50% - 935px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-2 .page1-tallbuilding {
+    position: absolute;
+    bottom: -70px;
+    left: calc(50% + 600px);
+    z-index: 800;
+    width: 300px;
+}
+
+#scenario-2 .page1-pollutedbush {
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% + 400px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-2 .page1-witheredsunflower {
+    position: absolute;
+    bottom: -12px;
+    left: calc(50% - 500px);
+    z-index: 1200;
+    width: 200px;
+    transform: rotate(10deg);
+    pointer-events: auto;
+}
+
+#scenario-2 .page1-npc-oldman {
+    position: absolute;
+    bottom: 150px;
+    left: calc(50% - 350px);
+    z-index: 1200;
+    width: 200px;
+}
+
+#scenario-2 .page1-npc-bubbles {
+    position: absolute;
+    bottom: 370px;
+    left: calc(50% - 200px);
+    z-index: 1200;
+    width: 120px;
+    pointer-events: auto;
+}
+
+#scenario-2 .page1-smoke-1,
+#scenario-2 .page1-smoke-2,
+#scenario-2 .page1-smoke-3,
+#scenario-2 .page1-smoke-4 {
+    position: absolute;
+    z-index: 1300;
+}
+
+#scenario-2 .page1-smoke-1 {
+    bottom: 350px;
+    left: calc(50% + 70px);
+    width: 50px;
+}
+
+#scenario-2 .page1-smoke-2 {
+    bottom: 480px;
+    left: calc(50% + 35px);
+    width: 130px;
+}
+
+#scenario-2 .page1-smoke-3 {
+    bottom: 610px;
+    left: calc(50% - 630px);
+    width: 200px;
+}
+
+#scenario-2 .page1-smoke-4 {
+    bottom: 550px;
+    left: calc(50% + 540px);
+    width: 200px;
+}
+
+#scenario-3 .page2-gate {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 960px);
+    z-index: 800;
+    width: 1900px;
+}
+
+#scenario-3 .page2-background-building {
+    position: absolute;
+    bottom: 400px;
+    left: calc(50% - 720px);
+    z-index: 600;
+    width: 1400px;
+}
+
+#scenario-3 .page2-rock-left {
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 940px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-3 .page2-rock-right {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% + 450px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-3 .page2-npc-oldman {
+    position: absolute;
+    bottom: 150px;
+    left: calc(50% - 400px);
+    z-index: 1200;
+    width: 200px;
+}
+
+#scenario-3 .page2-npc-daoshi {
+    position: absolute;
+    bottom: 150px;
+    left: calc(50% + 200px);
+    z-index: 1200;
+    width: 200px;
+    pointer-events: auto;
+}
+
+#scenario-3 .page2-danlu {
+    position: absolute;
+    bottom: 130px;
+    left: calc(50% - 100px);
+    z-index: 1200;
+    width: 170px;
+    pointer-events: auto;
+}
+
+@keyframes mysticalGlow {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 35px rgba(255, 215, 0, 1)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+    }
+}
+
+#scenario-3 .page2-danlu .element {
+    animation: mysticalGlow 2.5s infinite ease-in-out;
+}
+
+#scenario-4 .page3-background-building {
+    position: absolute;
+    bottom: 250px;
+    left: calc(50% - 650px);
+    z-index: 700;
+    width: 1300px;
+}
+
+#scenario-4 .page3-building-left {
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 700px);
+    z-index: 800;
+    width: 600px;
+}
+
+#scenario-4 .page3-building-right {
+    position: absolute;
+    bottom: -60px;
+    left: calc(50% + 100px);
+    z-index: 800;
+    width: 700px;
+}
+
+#scenario-4 .page3-tower {
+    position: absolute;
+    bottom: 175px;
+    left: calc(50% - 70px);
+    z-index: 800;
+    width: 150px;
+    pointer-events: auto;
+}
+
+#scenario-4 .page3-healthypinetree {
+    position: absolute;
+    bottom: -50px;
+    left: calc(50% - 935px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-4 .page3-tallbuilding {
+    position: absolute;
+    bottom: -70px;
+    left: calc(50% + 600px);
+    z-index: 1200;
+    width: 300px;
+}
+
+#scenario-4 .page3-healthybush {
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% + 400px);
+    z-index: 1200;
+    width: 400px;
+}
+
+#scenario-4 .page3-sunflower {
+    position: absolute;
+    bottom: -50px;
+    left: calc(50% - 500px);
+    z-index: 1200;
+    width: 800px;
+    pointer-events: auto;
+}
+
+#scenario-4 .page3-cloud-1 {
+    position: absolute;
+    top: 110px;
+    left: calc(50% - 740px);
+    width: 300px;
+    z-index: 500;
+}
+
+#scenario-4 .page3-cloud-2 {
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 340px);
+    width: 200px;
+    z-index: 500;
+}
+
+#scenario-4 .page3-cloud-3 {
+    position: absolute;
+    top: 110px;
+    left: calc(50% + 40px);
+    width: 300px;
+    z-index: 500;
+}
+
+#scenario-4 .page3-cloud-4 {
+    position: absolute;
+    top: 30px;
+    left: calc(50% + 540px);
+    width: 300px;
+    z-index: 500;
+}
+
+@keyframes toxicPulse {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 255, 204, 0.8)) drop-shadow(0 0 15px rgba(138, 43, 226, 0.8));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.5));
+    }
+}
+
+#scenario-2 .page1-factory.pollution-active .element {
+    animation: toxicPulse 2s infinite alternate;
+}
+
+@keyframes holyTempleGlow {
+    0% {
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 1)) drop-shadow(0 0 10px rgb(244, 209, 9));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+}
+
+#scenario-4 .page3-tower.glow-active .element {
+    animation: holyTempleGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes lifeBreathGlow {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 35px rgba(255, 215, 0, 1)) drop-shadow(0 0 15px rgba(255, 165, 0, 0.8));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    }
+}
+
+#scenario-4 .page3-sunflower.glow-active .element {
+    animation: lifeBreathGlow 2.5s infinite alternate ease-in-out;
+}
+
+.cinematic-narrator {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    z-index: 2500;
+    width: 80%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.9),
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        0 4px 12px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.vn-dialogue-box {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    z-index: 2500;
+    width: 750px;
+    padding: 20px 30px;
+    background: linear-gradient(90deg, rgba(15, 20, 25, 0.75) 0%, rgba(15, 20, 25, 0.1) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-left: 4px solid;
+    border-radius: 4px 24px 24px 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.vn-speaker {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.vn-text {
+    color: #e2e8f0;
+    font-size: 20px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.speaker-oldman {
+    border-left-color: #ffd700;
+}
+
+.speaker-oldman .vn-speaker {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.speaker-daoshi {
+    border-left-color: #00ffcc;
+}
+
+.speaker-daoshi .vn-speaker {
+    color: #00ffcc;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+@media (max-width: 768px) {
+    .world-scale-wrapper {
+        transform: scale(0.45);
+        transform-origin: center bottom;
+        bottom: 80px;
+    }
+
+    .global-backgrounds img {
+        height: 100vh;
+        width: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .cinematic-narrator {
+        width: 90%;
+        font-size: 16px;
+        top: 10%;
+        letter-spacing: 2px;
+    }
+
+    .vn-dialogue-box {
+        width: 90%;
+        padding: 15px 20px;
+        bottom: 20px;
+        border-radius: 4px 16px 16px 4px;
+    }
+
+    .vn-speaker {
+        font-size: 14px;
+    }
+
+    .vn-text {
+        font-size: 16px;
+    }
+}
