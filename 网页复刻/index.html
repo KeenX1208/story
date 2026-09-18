@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Scrollytelling Parallax Homepage</title>
+        <link href="style.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+</head>
+
+<body>
+        <div id="scroll-container" style="height: 2000vh;">
+                <div class="scrolly-viewport">
+
+                        <div class="global-backgrounds">
+                                <div class="scenario-1-background"><img src="images/background-clear.webp"
+                                                class="element"></div>
+                                <div class="scenario-2-background"><img src="images/background-polluted.webp"
+                                                class="element"></div>
+                                <div class="scenario-3-background"><img src="images/background-clear.webp"
+                                                class="element"></div>
+                                <div class="scenario-4-background-before"><img src="images/background-polluted.webp"
+                                                class="element"></div>
+                                <div class="scenario-4-background-after"><img src="images/background-clear.webp"
+                                                class="element"></div>
+                        </div>
+
+                        <div class="world-scale-wrapper">
+                                <div class="ground">
+                                        <img class="ground-img" src="images/ground.webp" alt="Ground Image">
+                                </div>
+
+                                <div class="home-scenario" id="scenario-1">
+                                        <div class="title-heading"><img src="images/heading.webp" class="element"></div>
+                                        <div class="title-house"><img src="images/building-left.webp" class="element">
+                                        </div>
+                                        <div class="title-tree"><img src="images/lovelytree.webp" class="element"></div>
+                                        <div class="title-bush"><img src="images/healty-bush.webp" class="element">
+                                        </div>
+                                        <div class="title-pinetree"><img src="images/healthy-pinetree.webp"
+                                                        class="element"></div>
+                                        <div class="title-cloud-1 cloud-above"><img src="images/cloud1.webp"
+                                                        class="element"></div>
+                                        <div class="title-cloud-2 cloud-below"><img src="images/cloud2.webp"
+                                                        class="element"></div>
+                                        <div class="title-cloud-3 cloud-above"><img src="images/cloud3.webp"
+                                                        class="element"></div>
+                                        <div class="title-cloud-4 cloud-below"><img src="images/cloud4.webp"
+                                                        class="element"></div>
+                                </div>
+
+                                <div class="home-scenario" id="scenario-2">
+                                        <div class="page1-background-building"><img
+                                                        src="images/page1-background-building.webp" class="element">
+                                        </div>
+                                        <div class="page1-building-left"><img src="images/page1-building-left.webp"
+                                                        class="element"></div>
+                                        <div class="page1-building-right"><img src="images/page1-building-right.webp"
+                                                        class="element"></div>
+                                        <div class="page1-chimney"><img src="images/page1-chimney.webp" class="element">
+                                        </div>
+                                        <div class="page1-temple"><img src="images/page1-building-middle.webp"
+                                                        class="element"></div>
+                                        <div class="page1-factory interactive-element"><img
+                                                        src="images/page1-factory.webp" class="element"></div>
+                                        <div class="page1-pollutedpinetree"><img
+                                                        src="images/page1-pollutedpinetree.webp" class="element"></div>
+                                        <div class="page1-tallbuilding"><img src="images/page1-righttower.webp"
+                                                        class="element"></div>
+                                        <div class="page1-pollutedbush"><img src="images/page1-pollutedbush.webp"
+                                                        class="element"></div>
+                                        <div class="page1-smoke-1"><img src="images/page1-smoke-mini.webp"
+                                                        class="element"></div>
+                                        <div class="page1-smoke-2"><img src="images/page1-smoke-small.webp"
+                                                        class="element"></div>
+                                        <div class="page1-smoke-3"><img src="images/page1-smoke-large.webp"
+                                                        class="element"></div>
+                                        <div class="page1-smoke-4"><img src="images/page1-smoke-large.webp"
+                                                        class="element"></div>
+                                        <div class="page1-witheredsunflower interactive-element"><img
+                                                        src="images/page1-witheredsunflower.webp" class="element"></div>
+                                        <div class="page1-npc-oldman"><img src="images/oldman.webp" class="element">
+                                        </div>
+                                        <div class="page1-npc-bubbles interactive-element"><img
+                                                        src="images/page1-bubbles.webp" class="element"></div>
+                                </div>
+
+                                <div class="home-scenario" id="scenario-3">
+                                        <div class="page2-background-building"><img
+                                                        src="images/page2-background-building.webp" class="element">
+                                        </div>
+                                        <div class="page2-gate"><img src="images/page2-gate.webp" class="element"></div>
+                                        <div class="page2-rock-left"><img src="images/page2-rock-left.webp"
+                                                        class="element"></div>
+                                        <div class="page2-rock-right"><img src="images/page2-rock-right.webp"
+                                                        class="element"></div>
+                                        <div class="page2-npc-oldman"><img src="images/oldman.webp" class="element">
+                                        </div>
+                                        <div class="page2-npc-daoshi interactive-element"><img
+                                                        src="images/doshi-danlu.webp" class="element"></div>
+                                        <div class="page2-danlu interactive-element"><img src="images/page2-danlu.webp"
+                                                        class="element"></div>
+                                </div>
+
+                                <div class="home-scenario" id="scenario-4">
+                                        <div class="page3-background-building"><img
+                                                        src="images/page3-background-building.webp" class="element">
+                                        </div>
+                                        <div class="page3-building-left"><img src="images/page3-building-left.webp"
+                                                        class="element"></div>
+                                        <div class="page3-building-right"><img src="images/page3-building-right.webp"
+                                                        class="element"></div>
+                                        <div class="page3-tower interactive-element"><img src="images/page3-tower.webp"
+                                                        class="element"></div>
+                                        <div class="page3-healthypinetree"><img src="images/page3-healthypinetree.webp"
+                                                        class="element"></div>
+                                        <div class="page3-tallbuilding"><img src="images/page3-tallbuilding.webp"
+                                                        class="element"></div>
+                                        <div class="page3-healthybush"><img src="images/page3-healthybush.webp"
+                                                        class="element"></div>
+                                        <div class="page3-sunflower interactive-element"><img
+                                                        src="images/page3-sunflower.webp" class="element"></div>
+                                        <div class="page3-cloud-1"><img src="images/cloud2.webp" class="element"></div>
+                                        <div class="page3-cloud-2"><img src="images/cloud1.webp" class="element"></div>
+                                        <div class="page3-cloud-3"><img src="images/cloud5.webp" class="element"></div>
+                                        <div class="page3-cloud-4"><img src="images/cloud4.webp" class="element"></div>
+                                </div>
+                        </div>
+
+                        <div class="ui-layer">
+                                <div class="cinematic-narrator" id="page0-caption">Welcome to our journey. Scroll down
+                                        to explore.</div>
+
+                                <div class="cinematic-narrator" id="page1-narrator">In a tranquil ancient town, one day,
+                                        smoke rose from distant factories...</div>
+                                <div class="vn-dialogue-box speaker-oldman" id="page1-dialogue">
+                                        <div class="vn-speaker">Old Man</div>
+                                        <div class="vn-text">"The sky grows dark... the earth is choking. What have we
+                                                done?"</div>
+                                </div>
+
+                                <div class="cinematic-narrator" id="page2-narrator">Seeking answers, he encountered a
+                                        young Taoist adept...</div>
+                                <div class="vn-dialogue-box speaker-daoshi" id="page2-dialogue-1">
+                                        <div class="vn-speaker">Taoist Adept</div>
+                                        <div class="vn-text">"The balance is broken. But this ancient furnace holds the
+                                                power of purification."</div>
+                                </div>
+                                <div class="vn-dialogue-box speaker-oldman" id="page2-dialogue-2">
+                                        <div class="vn-speaker">Old Man</div>
+                                        <div class="vn-text">"Is there truly hope to restore our home?"</div>
+                                </div>
+
+                                <div class="cinematic-narrator" id="page3-narrator">With wisdom and technology, the town
+                                        was cleansed, regaining its harmony.</div>
+                        </div>
+
+                </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
